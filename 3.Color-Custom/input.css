@@ -1,0 +1,173 @@
+/* TailwindCSS 4.1 커스텀 설정 파일 */
+/* 이 파일은 Tailwind의 기본 설정을 확장하거나 수정하기 위해 사용됩니다. */
+
+/* TailwindCSS 기본 레이어 불러오기 */
+@import "tailwindcss"; /* 또는 필요하다면, 아래처럼 쓸 수도 있습니다 */
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* 테마 설정 - 기본 테마를 확장하거나 수정
+   CSS 변수와 @theme 블록에서 커스텀 값을 정의하세요
+*/
+@theme {
+  /* 커스텀 색상 팔레트 정의 */
+  /* 브랜드 색상 - 50부터 900까지의 색상 스케일 */
+  --color-brand-50:   #f0f9ff;    /* 가장 밝은 브랜드 색상 */
+  --color-brand-100:  #e0f2fe;    /* 매우 밝은 브랜드 색상 */
+  --color-brand-200:  #bae6fd;    /* 밝은 브랜드 색상 */
+  --color-brand-300:  #7dd3fc;    /* 연한 브랜드 색상 */
+  --color-brand-400:  #38bdf8;    /* 중간 밝은 브랜드 색상 */
+  --color-brand-500:  #0ea5e9;    /* 메인 브랜드 색상 (기본값) */
+  --color-brand-600:  #0284c7;    /* 중간 어두운 브랜드 색상 */
+  --color-brand-700:  #0369a1;    /* 어두운 브랜드 색상 */
+  --color-brand-800:  #075985;    /* 매우 어두운 브랜드 색상 */
+  --color-brand-900:  #0c4a6e;    /* 가장 어두운 브랜드 색상 */
+
+  /* 세컨더리 색상 팔레트 */
+  --color-secondary-50:  #fdf4ff;
+  --color-secondary-100: #fae8ff;
+  --color-secondary-200: #f5d0fe;
+  --color-secondary-300: #f0abfc;
+  --color-secondary-400: #e879f9;
+  --color-secondary-500: #d946ef;   /* 메인 세컨더리 색상 */
+  --color-secondary-600: #c026d3;
+  --color-secondary-700: #a21caf;
+  --color-secondary-800: #86198f;
+  --color-secondary-900: #701a75;
+
+  /* 상태별 색상 정의 */
+  --color-success: #10b981;     /* 성공 상태 색상 */
+  --color-warning: #f59e0b;     /* 경고 상태 색상 */
+  --color-danger:  #ef4444;     /* 위험 상태 색상 */
+  --color-info:    #3b82f6;     /* 정보 상태 색상 */
+
+  /* 커스텀 그레이 색상 */
+  --color-custom-gray: #6b7280;
+
+  /* 특별한 용도의 색상 */
+  --color-accent: #8b5cf6;      /* 강조 색상 */
+  --color-muted:  #64748b;      /* 차분한 색상 */
+
+  /* 커스텀 폰트 패밀리 정의 */
+  --font-brand:   "Inter", system-ui, sans-serif;        /* 브랜드 폰트 스택 정의 */
+  --font-heading: "Poppins", sans-serif;                 /* 헤딩 폰트 스택 정의 */
+  --font-code:    "Fira Code", monospace;                /* 코드 폰트 스택 정의 */
+
+  /* 커스텀 폰트 크기 정의 */
+  --text-xxs: 0.625rem;    /* 10px - 매우 작은 텍스트 */
+  --text-xs:  0.75rem;     /* 12px - 작은 텍스트 */
+  --text-sm:  0.875rem;    /* 14px - 중간 작은 텍스트 */
+  --text-base: 1rem;       /* 16px - 기본 텍스트 */
+  --text-lg: 1.125rem;     /* 18px - 큰 텍스트 */
+  --text-xl: 1.25rem;      /* 20px - 더 큰 텍스트 */
+  --text-2xl: 1.5rem;      /* 24px - 제목 크기 */
+  --text-3xl: 1.875rem;    /* 30px - 큰 제목 */
+  --text-4xl: 2.25rem;     /* 36px - 메인 제목 */
+  --text-5xl: 3rem;        /* 48px - 거대한 제목 */
+  --text-6xl: 3.75rem;     /* 60px - 히어로 제목 */
+  --text-huge: 4rem;       /* 64px - 커스텀 거대 크기 */
+
+  /* 커스텀 간격(spacing) 정의 */
+  --spacing-13: 3.25rem;   /* 52px */
+  --spacing-15: 3.75rem;   /* 60px */
+  --spacing-17: 4.25rem;   /* 68px */
+  --spacing-18: 4.5rem;    /* 72px */
+  --spacing-19: 4.75rem;   /* 76px */
+  --spacing-21: 5.25rem;   /* 84px */
+  --spacing-22: 5.5rem;    /* 88px */
+  --spacing-25: 6.25rem;   /* 100px */
+  --spacing-30: 7.5rem;    /* 120px */
+  --spacing-72: 18rem;     /* 288px */
+  --spacing-84: 21rem;     /* 336px */
+  --spacing-96: 24rem;     /* 384px */
+  --spacing-128: 32rem;    /* 512px */
+
+  /* 커스텀 border radius 정의 */
+  --radius-none: 0;
+  --radius-sm: 0.125rem;          /* 2px */
+  --radius-default: 0.25rem;      /* 4px */
+  --radius-md: 0.375rem;          /* 6px */
+  --radius-lg: 0.5rem;            /* 8px */
+  --radius-xl: 0.75rem;           /* 12px */
+  --radius-2xl: 1rem;             /* 16px */
+  --radius-3xl: 1.5rem;           /* 24px */
+  --radius-4xl: 2rem;             /* 32px */
+  --radius-full: 9999px;          /* 완전한 원형 */
+  --radius-custom: 0.625rem;      /* 커스텀 크기 (10px) */
+
+  /* 커스텀 최대 너비 정의 */
+  --max-w-8xl:      88rem;        /* 1408px */
+  --max-w-9xl:      96rem;        /* 1536px */
+  --max-w-container: 1200px;      /* 커스텀 컨테이너 너비 */
+
+  /* 커스텀 너비/높이 정의 */
+  --size-18:  4.5rem;    /* 72px */
+  --size-88: 22rem;      /* 352px */
+  --size-100: 25rem;     /* 400px */
+  --size-120: 30rem;     /* 480px */
+
+  /* 커스텀 z-index 정의 */
+  --z-60: 60;
+  --z-70: 70;
+  --z-80: 80;
+  --z-90: 90;
+  --z-100: 100;
+}
+
+/* 커스텀 그림자 정의 */
+@layer utilities {
+  /* sm, md, lg 등 기본 그림자 클래스는 tailwind 기본 제공됨 */
+  /* 커스텀 그림자 효과 */
+  .shadow-custom   { box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39); }
+  .shadow-brand    { box-shadow: 0 4px 14px 0 rgba(14, 165, 233, 0.39); }
+  .shadow-glow     { box-shadow: 0 0 20px rgba(14, 165, 233, 0.5); }
+}
+
+/* 커스텀 배경 그라디언트 정의 */
+@layer utilities {
+  .bg-gradient-brand    { background-image: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%); }
+  .bg-gradient-sunset   { background-image: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%); }
+  .bg-gradient-ocean    { background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+  .bg-gradient-fire     { background-image: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+}
+
+/* 커스텀 애니메이션 및 키프레임 정의 */
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0%   { transform: translateY(100%); opacity: 0; }
+  100% { transform: translateY(0);    opacity: 1; }
+}
+
+/* 커스텀 애니메이션 유틸리티 */
+@layer utilities {
+  .animate-fade-in     { animation: fadeIn 0.5s ease-in-out; }
+  .animate-slide-up    { animation: slideUp 0.3s ease-out; }
+  .animate-bounce-slow { animation: bounce 2s infinite; }
+  .animate-pulse-fast  { animation: pulse 1s linear infinite; }
+  .animate-spin-slow   { animation: spin 3s linear infinite; }
+}
+
+/* 예시: 커스텀 컴포넌트 클래스
+@layer components {
+  .btn-brand {
+    background: var(--color-brand-500);
+    color: #fff;
+    border-radius: var(--radius-md);
+    font-family: var(--font-brand);
+    padding: 0.5rem 1rem;
+    box-shadow: var(--box-shadow-md, 0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06));
+  }
+}
+*/
+
+/* 다크 모드 설정: Tailwind 기본 다크모드(.dark) 활용
+   <body class="dark"> ... </body> 형태로 사용하세요
+*/
+
+/* 플러그인 및 기타 설정은 별도 tailwindcss 설정(옵션)에서 관리하거나, 필요한 경우 CSS로 커스텀 유틸리티/class 추가 권장
+*/

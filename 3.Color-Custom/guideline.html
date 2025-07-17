@@ -1,0 +1,451 @@
+==============================================
+TailwindCSS 4.1 Colors & Borders 가이드
+==============================================
+
+🎨 Text Colors (텍스트 색상)
+===========================
+
+기본 색상 스케일
+--------------
+각 색상은 50(가장 밝음)부터 950(가장 어두움)까지의 스케일을 가집니다.
+
+text-gray-50    = color: #fafafa (가장 밝은 회색)
+text-gray-100   = color: #f5f5f5
+text-gray-200   = color: #e5e5e5
+text-gray-300   = color: #d4d4d4
+text-gray-400   = color: #a3a3a3
+text-gray-500   = color: #737373 (중간 회색)
+text-gray-600   = color: #525252
+text-gray-700   = color: #404040
+text-gray-800   = color: #262626
+text-gray-900   = color: #171717
+text-gray-950   = color: #0a0a0a (가장 어두운 회색)
+
+기본 색상 팔레트
+--------------
+Red (빨간색)
+text-red-50     = color: #fef2f2
+text-red-100    = color: #fee2e2
+text-red-200    = color: #fecaca
+text-red-300    = color: #fca5a5
+text-red-400    = color: #f87171
+text-red-500    = color: #ef4444 (기본 빨간색)
+text-red-600    = color: #dc2626
+text-red-700    = color: #b91c1c
+text-red-800    = color: #991b1b
+text-red-900    = color: #7f1d1d
+text-red-950    = color: #450a0a
+
+Blue (파란색)
+text-blue-50    = color: #eff6ff
+text-blue-100   = color: #dbeafe
+text-blue-200   = color: #bfdbfe
+text-blue-300   = color: #93c5fd
+text-blue-400   = color: #60a5fa
+text-blue-500   = color: #3b82f6 (기본 파란색)
+text-blue-600   = color: #2563eb
+text-blue-700   = color: #1d4ed8
+text-blue-800   = color: #1e40af
+text-blue-900   = color: #1e3a8a
+text-blue-950   = color: #172554
+
+Green (초록색)
+text-green-50   = color: #f0fdf4
+text-green-100  = color: #dcfce7
+text-green-200  = color: #bbf7d0
+text-green-300  = color: #86efac
+text-green-400  = color: #4ade80
+text-green-500  = color: #22c55e (기본 초록색)
+text-green-600  = color: #16a34a
+text-green-700  = color: #15803d
+text-green-800  = color: #166534
+text-green-900  = color: #14532d
+text-green-950  = color: #052e16
+
+Purple (보라색)
+text-purple-50  = color: #faf5ff
+text-purple-100 = color: #f3e8ff
+text-purple-200 = color: #e9d5ff
+text-purple-300 = color: #d8b4fe
+text-purple-400 = color: #c084fc
+text-purple-500 = color: #a855f7 (기본 보라색)
+text-purple-600 = color: #9333ea
+text-purple-700 = color: #7c3aed
+text-purple-800 = color: #6b21a8
+text-purple-900 = color: #581c87
+text-purple-950 = color: #3b0764
+
+기타 색상
+--------
+text-yellow-500 = color: #eab308 (노란색)
+text-orange-500 = color: #f97316 (주황색)
+text-pink-500   = color: #ec4899 (분홍색)
+text-indigo-500 = color: #6366f1 (인디고)
+text-cyan-500   = color: #06b6d4 (시안)
+text-teal-500   = color: #14b8a6 (틸)
+text-lime-500   = color: #84cc16 (라임)
+text-amber-500  = color: #f59e0b (앰버)
+text-rose-500   = color: #f43f5e (로즈)
+
+🌈 Background Colors (배경 색상)
+===============================
+
+기본 배경 색상
+--------------
+bg-white        = background-color: #ffffff
+bg-black        = background-color: #000000
+bg-transparent  = background-color: transparent
+bg-current      = background-color: currentColor
+bg-inherit      = background-color: inherit
+
+색상 스케일 (텍스트 색상과 동일)
+bg-gray-50 ~ bg-gray-950
+bg-red-50 ~ bg-red-950
+bg-blue-50 ~ bg-blue-950
+bg-green-50 ~ bg-green-950
+bg-purple-50 ~ bg-purple-950
+등등...
+
+🌅 Gradients (그라디언트)
+=========================
+
+그라디언트 방향
+--------------
+bg-gradient-to-t      = linear-gradient(to top, ...)
+bg-gradient-to-tr     = linear-gradient(to top right, ...)
+bg-gradient-to-r      = linear-gradient(to right, ...)
+bg-gradient-to-br     = linear-gradient(to bottom right, ...)
+bg-gradient-to-b      = linear-gradient(to bottom, ...)
+bg-gradient-to-bl     = linear-gradient(to bottom left, ...)
+bg-gradient-to-l      = linear-gradient(to left, ...)
+bg-gradient-to-tl     = linear-gradient(to top left, ...)
+
+그라디언트 색상 정의
+------------------
+from-{color}    = 시작 색상
+via-{color}     = 중간 색상 (선택사항)
+to-{color}      = 끝 색상
+
+예시:
+bg-gradient-to-r from-blue-500 to-purple-600
+bg-gradient-to-br from-green-400 via-blue-500 to-purple-600
+
+🌟 Shadows (그림자)
+===================
+
+기본 그림자 크기
+--------------
+shadow-sm       = box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05)
+shadow          = box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)
+shadow-md       = box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)
+shadow-lg       = box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)
+shadow-xl       = box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)
+shadow-2xl      = box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25)
+
+특수 그림자
+----------
+shadow-inner    = box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)
+shadow-none     = box-shadow: none
+
+그림자 색상
+----------
+shadow-red-500/50    = 빨간색 그림자 (50% 투명도)
+shadow-blue-500/50   = 파란색 그림자 (50% 투명도)
+shadow-green-500/50  = 초록색 그림자 (50% 투명도)
+
+🔲 Borders (테두리)
+===================
+
+테두리 두께
+----------
+border-0        = border-width: 0px
+border          = border-width: 1px
+border-2        = border-width: 2px
+border-4        = border-width: 4px
+border-8        = border-width: 8px
+
+개별 테두리 두께
+--------------
+border-t-0      = border-top-width: 0px
+border-t        = border-top-width: 1px
+border-t-2      = border-top-width: 2px
+border-t-4      = border-top-width: 4px
+border-t-8      = border-top-width: 8px
+
+border-r-0      = border-right-width: 0px
+border-r        = border-right-width: 1px
+border-r-2      = border-right-width: 2px
+border-r-4      = border-right-width: 4px
+border-r-8      = border-right-width: 8px
+
+border-b-0      = border-bottom-width: 0px
+border-b        = border-bottom-width: 1px
+border-b-2      = border-bottom-width: 2px
+border-b-4      = border-bottom-width: 4px
+border-b-8      = border-bottom-width: 8px
+
+border-l-0      = border-left-width: 0px
+border-l        = border-left-width: 1px
+border-l-2      = border-left-width: 2px
+border-l-4      = border-left-width: 4px
+border-l-8      = border-left-width: 8px
+
+테두리 색상
+----------
+border-transparent = border-color: transparent
+border-current     = border-color: currentColor
+border-inherit     = border-color: inherit
+
+색상 스케일 (배경/텍스트 색상과 동일)
+border-gray-50 ~ border-gray-950
+border-red-50 ~ border-red-950
+border-blue-50 ~ border-blue-950
+등등...
+
+테두리 스타일
+------------
+border-solid    = border-style: solid
+border-dashed   = border-style: dashed
+border-dotted   = border-style: dotted
+border-double   = border-style: double
+border-hidden   = border-style: hidden
+border-none     = border-style: none
+
+🌙 Rounded Corners (둥근 모서리)
+===============================
+
+기본 둥근 모서리
+--------------
+rounded-none    = border-radius: 0px
+rounded-sm      = border-radius: 0.125rem (2px)
+rounded         = border-radius: 0.25rem (4px)
+rounded-md      = border-radius: 0.375rem (6px)
+rounded-lg      = border-radius: 0.5rem (8px)
+rounded-xl      = border-radius: 0.75rem (12px)
+rounded-2xl     = border-radius: 1rem (16px)
+rounded-3xl     = border-radius: 1.5rem (24px)
+rounded-full    = border-radius: 9999px (완전한 원형)
+
+개별 둥근 모서리
+--------------
+rounded-t-none  = border-top-left-radius: 0px; border-top-right-radius: 0px
+rounded-t-sm    = border-top-left-radius: 2px; border-top-right-radius: 2px
+rounded-t       = border-top-left-radius: 4px; border-top-right-radius: 4px
+rounded-t-md    = border-top-left-radius: 6px; border-top-right-radius: 6px
+rounded-t-lg    = border-top-left-radius: 8px; border-top-right-radius: 8px
+rounded-t-xl    = border-top-left-radius: 12px; border-top-right-radius: 12px
+rounded-t-2xl   = border-top-left-radius: 16px; border-top-right-radius: 16px
+rounded-t-3xl   = border-top-left-radius: 24px; border-top-right-radius: 24px
+rounded-t-full  = border-top-left-radius: 9999px; border-top-right-radius: 9999px
+
+rounded-r-none  = border-top-right-radius: 0px; border-bottom-right-radius: 0px
+rounded-r-sm    = border-top-right-radius: 2px; border-bottom-right-radius: 2px
+rounded-r       = border-top-right-radius: 4px; border-bottom-right-radius: 4px
+rounded-r-md    = border-top-right-radius: 6px; border-bottom-right-radius: 6px
+rounded-r-lg    = border-top-right-radius: 8px; border-bottom-right-radius: 8px
+rounded-r-xl    = border-top-right-radius: 12px; border-bottom-right-radius: 12px
+rounded-r-2xl   = border-top-right-radius: 16px; border-bottom-right-radius: 16px
+rounded-r-3xl   = border-top-right-radius: 24px; border-bottom-right-radius: 24px
+rounded-r-full  = border-top-right-radius: 9999px; border-bottom-right-radius: 9999px
+
+rounded-b-none  = border-bottom-left-radius: 0px; border-bottom-right-radius: 0px
+rounded-b-sm    = border-bottom-left-radius: 2px; border-bottom-right-radius: 2px
+rounded-b       = border-bottom-left-radius: 4px; border-bottom-right-radius: 4px
+rounded-b-md    = border-bottom-left-radius: 6px; border-bottom-right-radius: 6px
+rounded-b-lg    = border-bottom-left-radius: 8px; border-bottom-right-radius: 8px
+rounded-b-xl    = border-bottom-left-radius: 12px; border-bottom-right-radius: 12px
+rounded-b-2xl   = border-bottom-left-radius: 16px; border-bottom-right-radius: 16px
+rounded-b-3xl   = border-bottom-left-radius: 24px; border-bottom-right-radius: 24px
+rounded-b-full  = border-bottom-left-radius: 9999px; border-bottom-right-radius: 9999px
+
+rounded-l-none  = border-top-left-radius: 0px; border-bottom-left-radius: 0px
+rounded-l-sm    = border-top-left-radius: 2px; border-bottom-left-radius: 2px
+rounded-l       = border-top-left-radius: 4px; border-bottom-left-radius: 4px
+rounded-l-md    = border-top-left-radius: 6px; border-bottom-left-radius: 6px
+rounded-l-lg    = border-top-left-radius: 8px; border-bottom-left-radius: 8px
+rounded-l-xl    = border-top-left-radius: 12px; border-bottom-left-radius: 12px
+rounded-l-2xl   = border-top-left-radius: 16px; border-bottom-left-radius: 16px
+rounded-l-3xl   = border-top-left-radius: 24px; border-bottom-left-radius: 24px
+rounded-l-full  = border-top-left-radius: 9999px; border-bottom-left-radius: 9999px
+
+특정 모서리 둥글게
+-----------------
+rounded-tl-none = border-top-left-radius: 0px
+rounded-tl-sm   = border-top-left-radius: 2px
+rounded-tl      = border-top-left-radius: 4px
+rounded-tl-md   = border-top-left-radius: 6px
+rounded-tl-lg   = border-top-left-radius: 8px
+rounded-tl-xl   = border-top-left-radius: 12px
+rounded-tl-2xl  = border-top-left-radius: 16px
+rounded-tl-3xl  = border-top-left-radius: 24px
+rounded-tl-full = border-top-left-radius: 9999px
+
+rounded-tr-none = border-top-right-radius: 0px
+rounded-tr-sm   = border-top-right-radius: 2px
+rounded-tr      = border-top-right-radius: 4px
+rounded-tr-md   = border-top-right-radius: 6px
+rounded-tr-lg   = border-top-right-radius: 8px
+rounded-tr-xl   = border-top-right-radius: 12px
+rounded-tr-2xl  = border-top-right-radius: 16px
+rounded-tr-3xl  = border-top-right-radius: 24px
+rounded-tr-full = border-top-right-radius: 9999px
+
+rounded-bl-none = border-bottom-left-radius: 0px
+rounded-bl-sm   = border-bottom-left-radius: 2px
+rounded-bl      = border-bottom-left-radius: 4px
+rounded-bl-md   = border-bottom-left-radius: 6px
+rounded-bl-lg   = border-bottom-left-radius: 8px
+rounded-bl-xl   = border-bottom-left-radius: 12px
+rounded-bl-2xl  = border-bottom-left-radius: 16px
+rounded-bl-3xl  = border-bottom-left-radius: 24px
+rounded-bl-full = border-bottom-left-radius: 9999px
+
+rounded-br-none = border-bottom-right-radius: 0px
+rounded-br-sm   = border-bottom-right-radius: 2px
+rounded-br      = border-bottom-right-radius: 4px
+rounded-br-md   = border-bottom-right-radius: 6px
+rounded-br-lg   = border-bottom-right-radius: 8px
+rounded-br-xl   = border-bottom-right-radius: 12px
+rounded-br-2xl  = border-bottom-right-radius: 16px
+rounded-br-3xl  = border-bottom-right-radius: 24px
+rounded-br-full = border-bottom-right-radius: 9999px
+
+⚙️ Config 파일 커스터마이징
+===========================
+
+색상 팔레트 확장
+--------------
+colors: {
+  'brand': {
+    50: '#f0f9ff',
+    100: '#e0f2fe',
+    200: '#bae6fd',
+    300: '#7dd3fc',
+    400: '#38bdf8',
+    500: '#0ea5e9',  // 메인 브랜드 색상
+    600: '#0284c7',
+    700: '#0369a1',
+    800: '#075985',
+    900: '#0c4a6e'
+  },
+  'success': '#10b981',
+  'warning': '#f59e0b',
+  'danger': '#ef4444'
+}
+
+커스텀 그림자 정의
+-----------------
+boxShadow: {
+  'custom': '0 4px 14px 0 rgba(0, 118, 255, 0.39)',
+  'brand': '0 4px 14px 0 rgba(14, 165, 233, 0.39)',
+  'glow': '0 0 20px rgba(14, 165, 233, 0.5)'
+}
+
+커스텀 border radius 정의
+------------------------
+borderRadius: {
+  '4xl': '2rem',
+  'custom': '0.625rem'
+}
+
+커스텀 그라디언트 정의
+--------------------
+backgroundImage: {
+  'gradient-brand': 'linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%)',
+  'gradient-sunset': 'linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%)',
+  'gradient-ocean': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+}
+
+🎯 실용적인 조합 예시
+====================
+
+버튼 컴포넌트
+------------
+Primary Button:
+bg-brand-500 hover:bg-brand-600 text-white px-6 py-3 rounded-lg font-medium shadow-md transition-colors
+
+Secondary Button:
+bg-secondary-500 hover:bg-secondary-600 text-white px-6 py-3 rounded-lg font-medium shadow-md transition-colors
+
+Success Button:
+bg-success hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium shadow-md transition-colors
+
+카드 컴포넌트
+------------
+기본 카드:
+bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow
+
+그라디언트 카드:
+bg-gradient-brand rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow text-white
+
+글로우 효과 카드:
+bg-white border-2 border-brand-200 rounded-xl p-6 shadow-brand hover:shadow-glow transition-shadow
+
+알림 컴포넌트
+------------
+성공 알림:
+bg-green-50 border border-green-200 rounded-lg p-4 text-green-800
+
+경고 알림:
+bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-yellow-800
+
+오류 알림:
+bg-red-50 border border-red-200 rounded-lg p-4 text-red-800
+
+정보 알림:
+bg-blue-50 border border-blue-200 rounded-lg p-4 text-blue-800
+
+📱 반응형 색상 및 스타일
+======================
+
+반응형 브레이크포인트
+------------------
+sm:     640px 이상
+md:     768px 이상
+lg:     1024px 이상
+xl:     1280px 이상
+2xl:    1536px 이상
+
+반응형 예시
+----------
+bg-red-500 md:bg-blue-500 lg:bg-green-500
+= 기본: 빨간색, 768px 이상: 파란색, 1024px 이상: 초록색
+
+shadow-sm md:shadow-md lg:shadow-lg
+= 기본: 작은 그림자, 768px 이상: 중간 그림자, 1024px 이상: 큰 그림자
+
+rounded-lg md:rounded-xl lg:rounded-2xl
+= 기본: 8px 둥글게, 768px 이상: 12px 둥글게, 1024px 이상: 16px 둥글게
+
+💡 디자인 시스템 구축 팁
+======================
+
+1. 일관된 색상 팔레트 사용
+- 브랜드 색상 정의 (Primary, Secondary)
+- 상태별 색상 정의 (Success, Warning, Danger, Info)
+- 그레이 스케일 통일
+
+2. 그림자 시스템
+- 계층별 그림자 정의 (카드, 모달, 드롭다운)
+- 브랜드 색상을 활용한 커스텀 그림자
+
+3. 둥근 모서리 시스템
+- 컴포넌트별 일관된 border-radius 사용
+- 작은 요소: rounded-md (6px)
+- 카드/버튼: rounded-lg (8px)
+- 이미지: rounded-xl (12px)
+
+4. 버튼 스타일링
+- 상태별 버튼 (Primary, Secondary, Success, Warning, Danger)
+- 크기별 버튼 (Small, Medium, Large)
+- 호버 효과 및 트랜지션 추가
+
+5. 카드 컴포넌트
+- 기본 카드: 흰색 배경 + 테두리 + 그림자
+- 강조 카드: 그라디언트 배경
+- 특수 카드: 글로우 효과 + 브랜드 색상
+
+6. 색상 대비 확인
+- 텍스트와 배경의 충분한 대비
+- 접근성 가이드라인 준수
+- 다크 모드 대응
