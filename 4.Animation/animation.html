@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TailwindCSS 4.1 애니메이션 실습</title>
+    <link href="./output.css" rel="stylesheet">
+  </head>
+  <body class="bg-gray-50 p-8">
+    <div class="max-w-6xl mx-auto space-y-12">
+      <!-- 제목 -->
+      <header class="text-center">
+        <h1 class="text-4xl font-bold text-gray-800 mb-2">
+          TailwindCSS 4.1 애니메이션 실습
+        </h1>
+        <p class="text-lg text-gray-600">기본 애니메이션과 트랜지션을 직접 확인해보세요</p>
+      </header>
+
+      <!-- 기본 애니메이션 섹션 -->
+      <section class="bg-white p-6 rounded-lg shadow-sm">
+        <h2 class="text-2xl font-semibold mb-4 text-blue-600">
+          🎭 기본 애니메이션 (Basic Animations)
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <!-- Spin -->
+          <div class="text-center p-4">
+            <div class="w-16 h-16 bg-blue-500 rounded-full animate-spin mx-auto mb-3 flex items-center justify-center">
+              <div class="w-8 h-8 bg-white rounded-full"></div>
+            </div>
+            <p class="font-medium">animate-spin</p>
+            <p class="text-sm text-gray-600">회전 애니메이션</p>
+          </div>
+
+          <!-- Ping -->
+          <div class="text-center p-4">
+            <div class="relative w-16 h-16 mx-auto mb-3">
+              <div class="absolute inset-0 bg-green-400 rounded-full animate-ping"></div>
+              <div class="relative w-16 h-16 bg-green-500 rounded-full"></div>
+            </div>
+            <p class="font-medium">animate-ping</p>
+            <p class="text-sm text-gray-600">핑 애니메이션</p>
+          </div>
+
+          <!-- Pulse -->
+          <div class="text-center p-4">
+            <div class="w-16 h-16 bg-purple-500 rounded-lg animate-pulse mx-auto mb-3"></div>
+            <p class="font-medium">animate-pulse</p>
+            <p class="text-sm text-gray-600">펄스 애니메이션</p>
+          </div>
+
+          <!-- Bounce -->
+          <div class="text-center p-4">
+            <div class="w-16 h-16 bg-red-500 rounded-full animate-bounce mx-auto mb-3"></div>
+            <p class="font-medium">animate-bounce</p>
+            <p class="text-sm text-gray-600">바운스 애니메이션</p>
+          </div>
+        </div>
+
+        <!-- 애니메이션 조합 예제 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-medium mb-4">실제 사용 예제</h3>
+          <div class="flex flex-wrap gap-4">
+            <button class="bg-blue-500 text-white px-4 py-2 rounded flex items-center space-x-2">
+              <div class="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+              <span>로딩 중...</span>
+            </button>
+            
+            <div class="relative">
+              <button class="bg-green-500 text-white px-4 py-2 rounded">알림</button>
+              <span class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping"></span>
+              <span class="absolute -top-1 -right-1 w-3 h-3 bg-red-600 rounded-full"></span>
+            </div>
+
+            <div class="bg-gray-200 rounded p-4 w-48">
+              <div class="h-4 bg-gray-300 rounded animate-pulse mb-2"></div>
+              <div class="h-4 bg-gray-300 rounded animate-pulse w-3/4 mb-2"></div>
+              <div class="h-4 bg-gray-300 rounded animate-pulse w-1/2"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 트랜지션 섹션 -->
+      <section class="bg-white p-6 rounded-lg shadow-sm">
+        <h2 class="text-2xl font-semibold mb-4 text-green-600">
+          🔄 트랜지션 (Transitions)
+        </h2>
+        <div class="space-y-6">
+          <!-- 기본 트랜지션 -->
+          <div>
+            <h3 class="text-lg font-medium mb-3">기본 트랜지션</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div class="text-center">
+                <div class="w-16 h-16 bg-blue-500 rounded transition hover:bg-blue-700 mx-auto mb-2 cursor-pointer"></div>
+                <p class="font-medium">transition</p>
+                <p class="text-sm text-gray-600">기본 트랜지션</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-green-500 rounded transition-colors hover:bg-red-500 mx-auto mb-2 cursor-pointer"></div>
+                <p class="font-medium">transition-colors</p>
+                <p class="text-sm text-gray-600">색상 트랜지션</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-purple-500 rounded transition-opacity hover:opacity-50 mx-auto mb-2 cursor-pointer"></div>
+                <p class="font-medium">transition-opacity</p>
+                <p class="text-sm text-gray-600">투명도 트랜지션</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-yellow-500 rounded shadow-md transition-shadow hover:shadow-xl mx-auto mb-2 cursor-pointer"></div>
+                <p class="font-medium">transition-shadow</p>
+                <p class="text-sm text-gray-600">그림자 트랜지션</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 지속 시간 -->
+          <div>
+            <h3 class="text-lg font-medium mb-3">지속 시간 (Duration)</h3>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+              <div class="text-center">
+                <div class="w-16 h-16 bg-indigo-500 rounded transition-colors duration-75 hover:bg-indigo-700 mx-auto mb-2 cursor-pointer"></div>
+                <p class="font-medium">duration-75</p>
+                <p class="text-sm text-gray-600">75ms</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-indigo-500 rounded transition-colors duration-150 hover:bg-indigo-700 mx-auto mb-2 cursor-pointer"></div>
+                <p class="font-medium">duration-150</p>
+                <p class="text-sm text-gray-600">150ms</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-indigo-500 rounded transition-colors duration-300 hover:bg-indigo-700 mx-auto mb-2 cursor-pointer"></div>
+                <p class="font-medium">duration-300</p>
+                <p class="text-sm text-gray-600">300ms</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-indigo-500 rounded transition-colors duration-500 hover:bg-indigo-700 mx-auto mb-2 cursor-pointer"></div>
+                <p class="font-medium">duration-500</p>
+                <p class="text-sm text-gray-600">500ms</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-indigo-500 rounded transition-colors duration-1000 hover:bg-indigo-700 mx-auto mb-2 cursor-pointer"></div>
+                <p class="font-medium">duration-1000</p>
+                <p class="text-sm text-gray-600">1000ms</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 이징 함수 -->
+          <div>
+            <h3 class="text-lg font-medium mb-3">이징 함수 (Easing)</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div class="text-center">
+                <div class="w-16 h-16 bg-pink-500 rounded transition-all duration-500 ease-linear hover:scale-110 hover:bg-pink-700 mx-auto mb-2 cursor-pointer"></div>
+                <p class="font-medium">ease-linear</p>
+                <p class="text-sm text-gray-600">선형</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-pink-500 rounded transition-all duration-500 ease-in hover:scale-110 hover:bg-pink-700 mx-auto mb-2 cursor-pointer"></div>
+                <p class="font-medium">ease-in</p>
+                <p class="text-sm text-gray-600">천천히 시작</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-pink-500 rounded transition-all duration-500 ease-out hover:scale-110 hover:bg-pink-700 mx-auto mb-2 cursor-pointer"></div>
+                <p class="font-medium">ease-out</p>
+                <p class="text-sm text-gray-600">천천히 끝</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-pink-500 rounded transition-all duration-500 ease-in-out hover:scale-110 hover:bg-pink-700 mx-auto mb-2 cursor-pointer"></div>
+                <p class="font-medium">ease-in-out</p>
+                <p class="text-sm text-gray-600">천천히 시작-끝</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Transform 섹션 -->
+      <section class="bg-white p-6 rounded-lg shadow-sm">
+        <h2 class="text-2xl font-semibold mb-4 text-purple-600">
+          🔄 Transform (변형)
+        </h2>
+        <div class="space-y-6">
+          <!-- Scale -->
+          <div>
+            <h3 class="text-lg font-medium mb-3">Scale (크기 변형)</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div class="text-center">
+                <div class="w-16 h-16 bg-blue-500 rounded transition-transform duration-300 hover:scale-75 mx-auto mb-2 cursor-pointer"></div>
+                <p class="font-medium">hover:scale-75</p>
+                <p class="text-sm text-gray-600">75% 크기</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-blue-500 rounded transition-transform duration-300 hover:scale-110 mx-auto mb-2 cursor-pointer"></div>
+                <p class="font-medium">hover:scale-110</p>
+                <p class="text-sm text-gray-600">110% 크기</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-blue-500 rounded transition-transform duration-300 hover:scale-x-110 mx-auto mb-2 cursor-pointer"></div>
+                <p class="font-medium">hover:scale-x-110</p>
+                <p class="text-sm text-gray-600">가로만 110%</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-blue-500 rounded transition-transform duration-300 hover:scale-y-110 mx-auto mb-2 cursor-pointer"></div>
+                <p class="font-medium">hover:scale-y-110</p>
+                <p class="text-sm text-gray-600">세로만 110%</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rotate -->
+          <div>
+            <h3 class="text-lg font-medium mb-3">Rotate (회전)</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div class="text-center">
+                <div class="w-16 h-16 bg-green-500 rounded transition-transform duration-300 hover:rotate-12 mx-auto mb-2 cursor-pointer flex items-center justify-center text-white font-bold">
+                  12°
+                </div>
+                <p class="font-medium">hover:rotate-12</p>
+                <p class="text-sm text-gray-600">12도 회전</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-green-500 rounded transition-transform duration-300 hover:rotate-45 mx-auto mb-2 cursor-pointer flex items-center justify-center text-white font-bold">
+                  45°
+                </div>
+                <p class="font-medium">hover:rotate-45</p>
+                <p class="text-sm text-gray-600">45도 회전</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-green-500 rounded transition-transform duration-300 hover:rotate-90 mx-auto mb-2 cursor-pointer flex items-center justify-center text-white font-bold">
+                  90°
+                </div>
+                <p class="font-medium">hover:rotate-90</p>
+                <p class="text-sm text-gray-600">90도 회전</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-green-500 rounded transition-transform duration-300 hover:-rotate-45 mx-auto mb-2 cursor-pointer flex items-center justify-center text-white font-bold">
+                  -45°
+                </div>
+                <p class="font-medium">hover:-rotate-45</p>
+                <p class="text-sm text-gray-600">-45도 회전</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Translate -->
+          <div>
+            <h3 class="text-lg font-medium mb-3">Translate (이동)</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div class="text-center">
+                <div class="w-16 h-16 bg-red-500 rounded transition-transform duration-300 hover:translate-x-2 mx-auto mb-2 cursor-pointer flex items-center justify-center text-white font-bold">
+                  →
+                </div>
+                <p class="font-medium">hover:translate-x-2</p>
+                <p class="text-sm text-gray-600">오른쪽 이동</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-red-500 rounded transition-transform duration-300 hover:-translate-y-2 mx-auto mb-2 cursor-pointer flex items-center justify-center text-white font-bold">
+                  ↑
+                </div>
+                <p class="font-medium">hover:-translate-y-2</p>
+                <p class="text-sm text-gray-600">위쪽 이동</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-red-500 rounded transition-transform duration-300 hover:translate-x-4 hover:translate-y-4 mx-auto mb-2 cursor-pointer flex items-center justify-center text-white font-bold">
+                  ↘
+                </div>
+                <p class="font-medium">translate-x-4 translate-y-4</p>
+                <p class="text-sm text-gray-600">대각선 이동</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-red-500 rounded transition-transform duration-300 hover:-translate-x-2 hover:-translate-y-2 mx-auto mb-2 cursor-pointer flex items-center justify-center text-white font-bold">
+                  ↖
+                </div>
+                <p class="font-medium">-translate-x-2 -translate-y-2</p>
+                <p class="text-sm text-gray-600">왼쪽 위 이동</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skew -->
+          <div>
+            <h3 class="text-lg font-medium mb-3">Skew (기울이기)</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div class="text-center">
+                <div class="w-16 h-16 bg-yellow-500 rounded transition-transform duration-300 hover:skew-x-12 mx-auto mb-2 cursor-pointer flex items-center justify-center text-white font-bold">
+                  X
+                </div>
+                <p class="font-medium">hover:skew-x-12</p>
+                <p class="text-sm text-gray-600">X축 기울이기</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-yellow-500 rounded transition-transform duration-300 hover:skew-y-12 mx-auto mb-2 cursor-pointer flex items-center justify-center text-white font-bold">
+                  Y
+                </div>
+                <p class="font-medium">hover:skew-y-12</p>
+                <p class="text-sm text-gray-600">Y축 기울이기</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-yellow-500 rounded transition-transform duration-300 hover:-skew-x-12 mx-auto mb-2 cursor-pointer flex items-center justify-center text-white font-bold">
+                  -X
+                </div>
+                <p class="font-medium">hover:-skew-x-12</p>
+                <p class="text-sm text-gray-600">X축 역방향</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-yellow-500 rounded transition-transform duration-300 hover:skew-x-6 hover:skew-y-6 mx-auto mb-2 cursor-pointer flex items-center justify-center text-white font-bold">
+                  XY
+                </div>
+                <p class="font-medium">skew-x-6 skew-y-6</p>
+                <p class="text-sm text-gray-600">XY축 기울이기</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 실제 사용 예제 -->
+      <section class="bg-white p-6 rounded-lg shadow-sm">
+        <h2 class="text-2xl font-semibold mb-4 text-red-600">
+          ✨ 실제 사용 예제
+        </h2>
+        
+        <div class="space-y-8">
+          <!-- 버튼 예제 -->
+          <div>
+            <h3 class="text-lg font-medium mb-4">인터랙티브 버튼</h3>
+            <div class="flex flex-wrap gap-4">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors duration-200 hover:scale-105 transform">
+                호버 효과
+              </button>
+              
+              <button class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                리프트 효과
+              </button>
+              
+              <button class="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg transition-all duration-200 hover:scale-95 active:scale-90">
+                클릭 효과
+              </button>
+              
+              <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:rotate-3 hover:scale-105">
+                재미있는 효과
+              </button>
+            </div>
+          </div>
+
+          <!-- 카드 예제 -->
+          <div>
+            <h3 class="text-lg font-medium mb-4">애니메이션 카드</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer">
+                <div class="w-12 h-12 bg-blue-100 rounded-lg mb-4 flex items-center justify-center transition-transform duration-300 hover:rotate-12">
+                  <span class="text-blue-600 font-bold">📊</span>
+                </div>
+                <h4 class="font-semibold text-lg mb-2">분석 도구</h4>
+                <p class="text-gray-600">호버 시 카드가 위로 올라갑니다.</p>
+              </div>
+              
+              <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer">
+                <div class="w-12 h-12 bg-green-100 rounded-lg mb-4 flex items-center justify-center transition-transform duration-300 hover:scale-125">
+                  <span class="text-green-600 font-bold">🚀</span>
+                </div>
+                <h4 class="font-semibold text-lg mb-2">성능 최적화</h4>
+                <p class="text-gray-600">호버 시 카드가 확대됩니다.</p>
+              </div>
+              
+              <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm transition-all duration-300 hover:shadow-xl hover:rotate-2 hover:scale-105 cursor-pointer">
+                <div class="w-12 h-12 bg-purple-100 rounded-lg mb-4 flex items-center justify-center transition-transform duration-300 hover:-rotate-12">
+                  <span class="text-purple-600 font-bold">🔒</span>
+                </div>
+                <h4 class="font-semibold text-lg mb-2">보안 강화</h4>
+                <p class="text-gray-600">호버 시 카드가 회전합니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 로딩 스피너 -->
+          <div>
+            <h3 class="text-lg font-medium mb-4">로딩 인디케이터</h3>
+            <div class="flex flex-wrap gap-6 items-center">
+              <div class="flex items-center space-x-2">
+                <div class="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                <span>스피너 로딩</span>
+              </div>
+              
+              <div class="flex items-center space-x-2">
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-red-500 rounded-full animate-bounce"></div>
+                  <div class="w-2 h-2 bg-red-500 rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+                  <div class="w-2 h-2 bg-red-500 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+                </div>
+                <span>도트 로딩</span>
+              </div>
+              
+              <div class="flex items-center space-x-2">
+                <div class="w-5 h-5 bg-green-500 rounded-full animate-pulse"></div>
+                <span>펄스 로딩</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 알림 배지 -->
+          <div>
+            <h3 class="text-lg font-medium mb-4">알림 배지</h3>
+            <div class="flex space-x-6">
+              <div class="relative">
+                <button class="bg-gray-600 text-white p-3 rounded-lg">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5c-5 0-7-5-7-5H3l5-5"/>
+                  </svg>
+                </button>
+                <span class="absolute -top-2 -right-2 w-4 h-4 bg-red-500 rounded-full animate-ping"></span>
+                <span class="absolute -top-2 -right-2 w-4 h-4 bg-red-600 rounded-full flex items-center justify-center">
+                  <span class="text-xs text-white">3</span>
+                </span>
+              </div>
+              
+              <div class="relative">
+                <button class="bg-gray-600 text-white p-3 rounded-lg">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h10M7 16h10"/>
+                  </svg>
+                </button>
+                <span class="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailwindCSS 4.1 랜딩페이지 연습</title>
+    <link href="./output.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand': {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    
+    <!-- 헤더/네비게이션 섹션 -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- 로고 영역 -->
+                <div class="flex items-center space-x-2">
+                    <!-- 여기에 로고와 브랜드명을 만들어보세요 -->
+                    <!-- 예: <div class="w-8 h-8 bg-brand-500 rounded-lg"></div> -->
+                    <!-- 예: <span class="text-xl font-bold text-gray-900">BrandName</span> -->
+                </div>
+                
+                <!-- 네비게이션 메뉴 -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <!-- 여기에 네비게이션 링크들을 만들어보세요 -->
+                    <!-- 예: <a href="#" class="text-gray-700 hover:text-brand-600 transition-colors">홈</a> -->
+                </div>
+                
+                <!-- CTA 버튼 -->
+                <div class="flex items-center space-x-4">
+                    <!-- 여기에 로그인, 회원가입 버튼을 만들어보세요 -->
+                    <!-- 예: <button class="bg-brand-500 text-white px-4 py-2 rounded-lg hover:bg-brand-600 transition-colors">시작하기</button> -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero 섹션 -->
+    <section class="pt-20 pb-16 lg:pt-28 lg:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- 왼쪽: 텍스트 콘텐츠 -->
+                <div class="text-center lg:text-left">
+                    <!-- 여기에 Hero 제목을 만들어보세요 -->
+                    <!-- 큰 폰트 크기(text-4xl ~ text-6xl), 굵은 폰트(font-bold), 그라디언트 텍스트 등을 활용해보세요 -->
+                    
+                    <!-- 여기에 Hero 설명 텍스트를 만들어보세요 -->
+                    <!-- 적절한 폰트 크기(text-lg ~ text-xl), 줄 간격(leading-relaxed), 색상(text-gray-600) 등을 활용해보세요 -->
+                    
+                    <!-- 여기에 CTA 버튼들을 만들어보세요 -->
+                    <!-- Primary 버튼과 Secondary 버튼을 만들고, 호버 효과와 애니메이션을 추가해보세요 -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
+                        <!-- 예: <button class="bg-brand-500 text-white px-8 py-3 rounded-xl hover:bg-brand-600 transition-all duration-300 hover:scale-105 hover:shadow-lg">...</button> -->
+                    </div>
+                </div>
+                
+                <!-- 오른쪽: 이미지 또는 그래픽 -->
+                <div class="flex justify-center lg:justify-end">
+                    <!-- 여기에 Hero 이미지나 그래픽을 만들어보세요 -->
+                    <!-- 간단한 도형들을 조합하거나, 그라디언트 배경의 박스를 만들어보세요 -->
+                    <!-- 애니메이션 효과(animate-bounce, animate-pulse 등)도 추가해보세요 -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features 섹션 -->
+    <section class="py-16 lg:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- 섹션 제목 -->
+            <div class="text-center mb-16">
+                <!-- 여기에 섹션 제목과 설명을 만들어보세요 -->
+                <!-- 예: <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">우리의 특징</h2> -->
+                <!-- 예: <p class="text-lg text-gray-600 max-w-2xl mx-auto">...</p> -->
+            </div>
+            
+            <!-- Features 카드 그리드 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 카드 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <!-- 여기에 아이콘 영역을 만들어보세요 -->
+                    <!-- 예: <div class="w-12 h-12 bg-brand-100 rounded-xl mb-6 flex items-center justify-center">...</div> -->
+                    
+                    <!-- 여기에 제목과 설명을 만들어보세요 -->
+                    <!-- 예: <h3 class="text-xl font-semibold text-gray-900 mb-3">빠른 성능</h3> -->
+                    <!-- 예: <p class="text-gray-600">...</p> -->
+                </div>
+                
+                <!-- Feature 카드 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <!-- Feature 카드 1과 동일한 구조로 만들어보세요 -->
+                </div>
+                
+                <!-- Feature 카드 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <!-- Feature 카드 1과 동일한 구조로 만들어보세요 -->
+                </div>
+                
+                <!-- 추가 카드들... -->
+                <!-- 필요에 따라 더 많은 카드를 추가해보세요 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 섹션 -->
+    <section class="py-16 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- 여기에 그라디언트 배경의 CTA 박스를 만들어보세요 -->
+            <div class="bg-gradient-to-r from-brand-500 to-purple-600 rounded-3xl p-8 lg:p-16 text-center text-white">
+                <!-- 여기에 CTA 제목을 만들어보세요 -->
+                <!-- 예: <h2 class="text-3xl lg:text-4xl font-bold mb-4">지금 시작해보세요!</h2> -->
+                
+                <!-- 여기에 CTA 설명을 만들어보세요 -->
+                <!-- 예: <p class="text-lg lg:text-xl mb-8 text-white/90">...</p> -->
+                
+                <!-- 여기에 CTA 버튼을 만들어보세요 -->
+                <!-- 흰색 배경의 버튼으로 만들고, 호버 효과를 추가해보세요 -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <!-- 예: <button class="bg-white text-brand-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 hover:scale-105">...</button> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer 섹션 -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- 브랜드 정보 -->
+                <div class="md:col-span-2">
+                    <!-- 여기에 로고와 회사 설명을 만들어보세요 -->
+                    <!-- 예: <div class="flex items-center space-x-2 mb-4">...</div> -->
+                    <!-- 예: <p class="text-gray-400">...</p> -->
+                </div>
+                
+                <!-- 링크 섹션 1 -->
+                <div>
+                    <!-- 여기에 링크 그룹을 만들어보세요 -->
+                    <!-- 예: <h4 class="font-semibold mb-4">서비스</h4> -->
+                    <!-- 예: <ul class="space-y-2">...</ul> -->
+                </div>
+                
+                <!-- 링크 섹션 2 -->
+                <div>
+                    <!-- 여기에 다른 링크 그룹을 만들어보세요 -->
+                </div>
+            </div>
+            
+            <!-- 구분선과 저작권 -->
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <!-- 여기에 저작권 정보를 만들어보세요 -->
+                <!-- 예: <p class="text-gray-400">&copy; 2024 BrandName. All rights reserved.</p> -->
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

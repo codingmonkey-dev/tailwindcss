@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailwindCSS 4.1 애니메이션 연습</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-6xl mx-auto space-y-12">
+        
+        <!-- 제목 -->
+        <header class="text-center">
+            <h1 class="text-4xl font-bold text-gray-800 mb-2">TailwindCSS 4.1 애니메이션 연습</h1>
+            <p class="text-lg text-gray-600">기본 애니메이션과 트랜지션을 직접 연습해보세요</p>
+        </header>
+
+        <!-- 기본 애니메이션 섹션 -->
+        <section class="bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="text-2xl font-semibold mb-4 text-blue-600">🎭 기본 애니메이션 (Basic Animations)</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- 여기에 animate-spin, animate-ping, animate-pulse, animate-bounce를 연습해보세요 -->
+                <!-- 예: <div class="w-16 h-16 bg-blue-500 rounded-full animate-spin mx-auto mb-3"></div> -->
+                
+            </div>
+
+            <!-- 애니메이션 조합 예제 연습 -->
+            <div class="mt-8">
+                <h3 class="text-lg font-medium mb-4">실제 사용 예제</h3>
+                <div class="flex flex-wrap gap-4">
+                    <!-- 여기에 로딩 버튼, 알림 배지, 스켈레톤 로딩을 만들어보세요 -->
+                    <!-- 로딩 버튼 예: <button class="bg-blue-500 text-white px-4 py-2 rounded flex items-center space-x-2">...</button> -->
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- 트랜지션 섹션 -->
+        <section class="bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="text-2xl font-semibold mb-4 text-green-600">🔄 트랜지션 (Transitions)</h2>
+            <div class="space-y-6">
+                <!-- 기본 트랜지션 연습 -->
+                <div>
+                    <h3 class="text-lg font-medium mb-3">기본 트랜지션</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- 여기에 transition, transition-colors, transition-opacity, transition-shadow를 연습해보세요 -->
+                        <!-- 예: <div class="w-16 h-16 bg-blue-500 rounded transition hover:bg-blue-700 mx-auto mb-2 cursor-pointer"></div> -->
+                        
+                    </div>
+                </div>
+
+                <!-- 지속 시간 연습 -->
+                <div>
+                    <h3 class="text-lg font-medium mb-3">지속 시간 (Duration)</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                        <!-- 여기에 duration-75, duration-150, duration-300, duration-500, duration-1000을 연습해보세요 -->
+                        <!-- 예: <div class="w-16 h-16 bg-indigo-500 rounded transition-colors duration-75 hover:bg-indigo-700 mx-auto mb-2 cursor-pointer"></div> -->
+                        
+                    </div>
+                </div>
+
+                <!-- 이징 함수 연습 -->
+                <div>
+                    <h3 class="text-lg font-medium mb-3">이징 함수 (Easing)</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- 여기에 ease-linear, ease-in, ease-out, ease-in-out을 연습해보세요 -->
+                        <!-- 예: <div class="w-16 h-16 bg-pink-500 rounded transition-all duration-500 ease-linear hover:scale-110 hover:bg-pink-700 mx-auto mb-2 cursor-pointer"></div> -->
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transform 섹션 -->
+        <section class="bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="text-2xl font-semibold mb-4 text-purple-600">🔄 Transform (변형)</h2>
+            <div class="space-y-6">
+                <!-- Scale 연습 -->
+                <div>
+                    <h3 class="text-lg font-medium mb-3">Scale (크기 변형)</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- 여기에 scale-75, scale-110, scale-x-110, scale-y-110을 연습해보세요 -->
+                        <!-- 예: <div class="w-16 h-16 bg-blue-500 rounded transition-transform duration-300 hover:scale-75 mx-auto mb-2 cursor-pointer"></div> -->
+                        
+                    </div>
+                </div>
+
+                <!-- Rotate 연습 -->
+                <div>
+                    <h3 class="text-lg font-medium mb-3">Rotate (회전)</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- 여기에 rotate-12, rotate-45, rotate-90, -rotate-45를 연습해보세요 -->
+                        <!-- 예: <div class="w-16 h-16 bg-green-500 rounded transition-transform duration-300 hover:rotate-12 mx-auto mb-2 cursor-pointer"></div> -->
+                        
+                    </div>
+                </div>
+
+                <!-- Translate 연습 -->
+                <div>
+                    <h3 class="text-lg font-medium mb-3">Translate (이동)</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- 여기에 translate-x-2, -translate-y-2, translate-x-4와 translate-y-4 조합, -translate-x-2와 -translate-y-2 조합을 연습해보세요 -->
+                        <!-- 예: <div class="w-16 h-16 bg-red-500 rounded transition-transform duration-300 hover:translate-x-2 mx-auto mb-2 cursor-pointer"></div> -->
+                        
+                    </div>
+                </div>
+
+                <!-- Skew 연습 -->
+                <div>
+                    <h3 class="text-lg font-medium mb-3">Skew (기울이기)</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- 여기에 skew-x-12, skew-y-12, -skew-x-12, skew-x-6와 skew-y-6 조합을 연습해보세요 -->
+                        <!-- 예: <div class="w-16 h-16 bg-yellow-500 rounded transition-transform duration-300 hover:skew-x-12 mx-auto mb-2 cursor-pointer"></div> -->
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 실제 사용 예제 -->
+        <section class="bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="text-2xl font-semibold mb-4 text-red-600">✨ 실제 사용 예제</h2>
+            
+            <div class="space-y-8">
+                <!-- 버튼 예제 연습 -->
+                <div>
+                    <h3 class="text-lg font-medium mb-4">인터랙티브 버튼</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <!-- 여기에 다양한 호버 효과, 리프트 효과, 클릭 효과, 재미있는 효과 버튼을 만들어보세요 -->
+                        <!-- 예: <button class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors duration-200 hover:scale-105 transform">...</button> -->
+                        
+                    </div>
+                </div>
+
+                <!-- 카드 예제 연습 -->
+                <div>
+                    <h3 class="text-lg font-medium mb-4">애니메이션 카드</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- 여기에 위로 올라가는 카드, 확대되는 카드, 회전하는 카드를 만들어보세요 -->
+                        <!-- 예: <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer">...</div> -->
+                        
+                    </div>
+                </div>
+
+                <!-- 로딩 스피너 연습 -->
+                <div>
+                    <h3 class="text-lg font-medium mb-4">로딩 인디케이터</h3>
+                    <div class="flex flex-wrap gap-6 items-center">
+                        <!-- 여기에 스피너 로딩, 도트 로딩, 펄스 로딩을 만들어보세요 -->
+                        <!-- 스피너 예: <div class="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div> -->
+                        
+                    </div>
+                </div>
+
+                <!-- 알림 배지 연습 -->
+                <div>
+                    <h3 class="text-lg font-medium mb-4">알림 배지</h3>
+                    <div class="flex space-x-6">
+                        <!-- 여기에 핑 효과가 있는 알림 배지와 펄스 효과가 있는 배지를 만들어보세요 -->
+                        <!-- 예: <span class="absolute -top-2 -right-2 w-4 h-4 bg-red-500 rounded-full animate-ping"></span> -->
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
