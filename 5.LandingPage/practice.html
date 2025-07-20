@@ -3,155 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TailwindCSS 4.1 랜딩페이지 연습</title>
+    <title>TechFlow - 혁신적인 비즈니스 솔루션</title>
     <link href="./output.css" rel="stylesheet">
 </head>
 <body class="bg-white">
-    
-    <!-- 헤더/네비게이션 섹션 -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <!-- 로고 영역 -->
-                <div class="flex items-center space-x-2">
-                    <!-- 여기에 로고와 브랜드명을 만들어보세요 -->
-                    <!-- 예: <div class="w-8 h-8 bg-brand-500 rounded-lg"></div> -->
-                    <!-- 예: <span class="text-xl font-bold text-gray-900">BrandName</span> -->
-                </div>
-                
-                <!-- 네비게이션 메뉴 -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <!-- 여기에 네비게이션 링크들을 만들어보세요 -->
-                    <!-- 예: <a href="#" class="text-gray-700 hover:text-brand-600 transition-colors">홈</a> -->
-                </div>
-                
-                <!-- CTA 버튼 -->
-                <div class="flex items-center space-x-4">
-                    <!-- 여기에 로그인, 회원가입 버튼을 만들어보세요 -->
-                    <!-- 예: <button class="bg-brand-500 text-white px-4 py-2 rounded-lg hover:bg-brand-600 transition-colors">시작하기</button> -->
-                </div>
+    <!-- Header / Navigation -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- 1. 브랜드 로고 섹션을 작업하세요 -->
+                <!-- 
+                힌트: 
+                - TechFlow 로고와 브랜드명 추가
+                - flex items-center space-x-2 사용
+                - 그라데이션 배경의 T 아이콘과 텍스트
+                -->
+
+                <!-- 2. 데스크톱 네비게이션 메뉴를 작업하세요 -->
+                <!-- 
+                힌트:
+                - 홈, 기능, 소개, 연락처 링크들
+                - hidden md:flex items-center space-x-8
+                - hover 효과 포함
+                -->
+
+                <!-- 3. CTA 버튼을 작업하세요 -->
+                <!-- 
+                힌트:
+                - "시작하기" 버튼
+                - hidden md:block
+                - 브랜드 색상과 hover 효과
+                -->
+
+                <!-- 4. 모바일 메뉴 버튼을 작업하세요 -->
+                <!-- 
+                힌트:
+                - 햄버거 메뉴 아이콘
+                - md:hidden
+                - SVG 아이콘 사용
+                -->
             </div>
+
+            <!-- 5. 모바일 메뉴를 작업하세요 -->
+            <!-- 
+            힌트:
+            - 모바일에서만 보이는 메뉴
+            - 기본적으로 hidden
+            - 세로 배치의 링크들과 CTA 버튼
+            -->
         </nav>
     </header>
 
-    <!-- Hero 섹션 -->
-    <section class="pt-20 pb-16 lg:pt-28 lg:pb-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- 왼쪽: 텍스트 콘텐츠 -->
-                <div class="text-center lg:text-left">
-                    <!-- 여기에 Hero 제목을 만들어보세요 -->
-                    <!-- 큰 폰트 크기(text-4xl ~ text-6xl), 굵은 폰트(font-bold), 그라디언트 텍스트 등을 활용해보세요 -->
-                    
-                    <!-- 여기에 Hero 설명 텍스트를 만들어보세요 -->
-                    <!-- 적절한 폰트 크기(text-lg ~ text-xl), 줄 간격(leading-relaxed), 색상(text-gray-600) 등을 활용해보세요 -->
-                    
-                    <!-- 여기에 CTA 버튼들을 만들어보세요 -->
-                    <!-- Primary 버튼과 Secondary 버튼을 만들고, 호버 효과와 애니메이션을 추가해보세요 -->
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
-                        <!-- 예: <button class="bg-brand-500 text-white px-8 py-3 rounded-xl hover:bg-brand-600 transition-all duration-300 hover:scale-105 hover:shadow-lg">...</button> -->
-                    </div>
-                </div>
-                
-                <!-- 오른쪽: 이미지 또는 그래픽 -->
-                <div class="flex justify-center lg:justify-end">
-                    <!-- 여기에 Hero 이미지나 그래픽을 만들어보세요 -->
-                    <!-- 간단한 도형들을 조합하거나, 그라디언트 배경의 박스를 만들어보세요 -->
-                    <!-- 애니메이션 효과(animate-bounce, animate-pulse 등)도 추가해보세요 -->
-                </div>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen bg-gradient-hero flex items-center justify-center text-white relative overflow-hidden">
+        <!-- 6. 배경 애니메이션 요소들을 작업하세요 -->
+        <!-- 
+        힌트:
+        - absolute 위치의 원형 요소들
+        - animate-pulse, animate-bounce, animate-ping 클래스
+        - 다양한 크기와 위치
+        -->
+
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <!-- 7. 메인 헤드라인을 작업하세요 -->
+                <!-- 
+                힌트:
+                - "비즈니스를 위한 혁신적인 솔루션" 
+                - 큰 폰트 크기 (text-4xl md:text-6xl lg:text-7xl)
+                - 그라데이션 텍스트 효과
+                -->
+
+                <!-- 8. 서브타이틀을 작업하세요 -->
+                <!-- 
+                힌트:
+                - AI와 클라우드 기술 설명
+                - text-xl md:text-2xl
+                - 최대 너비 제한
+                -->
+
+                <!-- 9. CTA 버튼들을 작업하세요 -->
+                <!-- 
+                힌트:
+                - "무료로 시작하기", "데모 보기" 버튼
+                - flex flex-col sm:flex-row gap-4
+                - 다른 스타일의 두 버튼
+                -->
+
+                <!-- 10. 통계 섹션을 작업하세요 -->
+                <!-- 
+                힌트:
+                - 4개의 통계 항목 (고객 수, 가동률, 지원, 파트너)
+                - grid grid-cols-2 md:grid-cols-4
+                - 상단 테두리 포함
+                -->
             </div>
         </div>
     </section>
 
-    <!-- Features 섹션 -->
-    <section class="py-16 lg:py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- 섹션 제목 -->
-            <div class="text-center mb-16">
-                <!-- 여기에 섹션 제목과 설명을 만들어보세요 -->
-                <!-- 예: <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">우리의 특징</h2> -->
-                <!-- 예: <p class="text-lg text-gray-600 max-w-2xl mx-auto">...</p> -->
-            </div>
-            
-            <!-- Features 카드 그리드 -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 카드 1 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                    <!-- 여기에 아이콘 영역을 만들어보세요 -->
-                    <!-- 예: <div class="w-12 h-12 bg-brand-100 rounded-xl mb-6 flex items-center justify-center">...</div> -->
-                    
-                    <!-- 여기에 제목과 설명을 만들어보세요 -->
-                    <!-- 예: <h3 class="text-xl font-semibold text-gray-900 mb-3">빠른 성능</h3> -->
-                    <!-- 예: <p class="text-gray-600">...</p> -->
-                </div>
-                
-                <!-- Feature 카드 2 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                    <!-- Feature 카드 1과 동일한 구조로 만들어보세요 -->
-                </div>
-                
-                <!-- Feature 카드 3 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                    <!-- Feature 카드 1과 동일한 구조로 만들어보세요 -->
-                </div>
-                
-                <!-- 추가 카드들... -->
-                <!-- 필요에 따라 더 많은 카드를 추가해보세요 -->
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <!-- 11. 섹션 헤더를 작업하세요 -->
+            <!-- 
+            힌트:
+            - "강력한 기능들" 제목
+            - 설명 텍스트
+            - 중앙 정렬
+            -->
+
+            <!-- 12. 기능 카드 그리드를 작업하세요 -->
+            <!-- 
+            힌트:
+            - 3개의 기능 카드 (초고속 성능, 강력한 보안, 스마트 분석)
+            - grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+            - 각 카드: 아이콘, 제목, 설명, 링크
+            - hover 효과 포함
+            -->
+        </div>
+    </section>
+
+    <!-- About/Testimonial Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+                <!-- 13. 왼쪽 콘텐츠를 작업하세요 -->
+                <!-- 
+                힌트:
+                - "신뢰할 수 있는 비즈니스 파트너" 제목
+                - 회사 소개 텍스트
+                - 통계 데이터 (성능 향상, ROI 달성 기간)
+                - CTA 버튼
+                -->
+
+                <!-- 14. 오른쪽 고객 후기 카드를 작업하세요 -->
+                <!-- 
+                힌트:
+                - 그라데이션 배경의 카드
+                - 고객 정보 (이미지, 이름, 회사)
+                - 후기 텍스트
+                - 별점 표시
+                - 애니메이션 요소들
+                -->
             </div>
         </div>
     </section>
 
-    <!-- CTA 섹션 -->
-    <section class="py-16 lg:py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- 여기에 그라디언트 배경의 CTA 박스를 만들어보세요 -->
-            <div class="bg-gradient-to-r from-brand-500 to-purple-600 rounded-3xl p-8 lg:p-16 text-center text-white">
-                <!-- 여기에 CTA 제목을 만들어보세요 -->
-                <!-- 예: <h2 class="text-3xl lg:text-4xl font-bold mb-4">지금 시작해보세요!</h2> -->
-                
-                <!-- 여기에 CTA 설명을 만들어보세요 -->
-                <!-- 예: <p class="text-lg lg:text-xl mb-8 text-white/90">...</p> -->
-                
-                <!-- 여기에 CTA 버튼을 만들어보세요 -->
-                <!-- 흰색 배경의 버튼으로 만들고, 호버 효과를 추가해보세요 -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <!-- 예: <button class="bg-white text-brand-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 hover:scale-105">...</button> -->
-                </div>
+    <!-- Call to Action Section -->
+    <section class="py-20 bg-gradient-cta text-white relative overflow-hidden">
+        <!-- 15. 배경 요소들을 작업하세요 -->
+        <!-- 
+        힌트:
+        - 회전하고 펄스하는 원형 요소들
+        - absolute 위치
+        -->
+
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <!-- 16. CTA 섹션 콘텐츠를 작업하세요 -->
+                <!-- 
+                힌트:
+                - "지금 바로 시작하세요!" 제목
+                - 무료 체험 설명
+                - 이메일 입력 폼
+                - 주의사항 텍스트
+                -->
             </div>
         </div>
     </section>
 
-    <!-- Footer 섹션 -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- 브랜드 정보 -->
-                <div class="md:col-span-2">
-                    <!-- 여기에 로고와 회사 설명을 만들어보세요 -->
-                    <!-- 예: <div class="flex items-center space-x-2 mb-4">...</div> -->
-                    <!-- 예: <p class="text-gray-400">...</p> -->
-                </div>
-                
-                <!-- 링크 섹션 1 -->
-                <div>
-                    <!-- 여기에 링크 그룹을 만들어보세요 -->
-                    <!-- 예: <h4 class="font-semibold mb-4">서비스</h4> -->
-                    <!-- 예: <ul class="space-y-2">...</ul> -->
-                </div>
-                
-                <!-- 링크 섹션 2 -->
-                <div>
-                    <!-- 여기에 다른 링크 그룹을 만들어보세요 -->
-                </div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- 17. 회사 정보 섹션을 작업하세요 -->
+                <!-- 
+                힌트:
+                - 로고와 회사명
+                - 회사 소개 텍스트
+                - 소셜 미디어 링크들
+                -->
+
+                <!-- 18. 빠른 링크 섹션을 작업하세요 -->
+                <!-- 
+                힌트:
+                - "빠른 링크" 제목
+                - 메뉴 링크들
+                -->
+
+                <!-- 19. 고객 지원 섹션을 작업하세요 -->
+                <!-- 
+                힌트:
+                - "고객 지원" 제목
+                - 지원 관련 링크들
+                -->
+
+                <!-- 20. 법적 고지 섹션을 작업하세요 -->
+                <!-- 
+                힌트:
+                - "법적 고지" 제목
+                - 이용약관, 개인정보처리방침 등
+                -->
             </div>
-            
-            <!-- 구분선과 저작권 -->
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <!-- 여기에 저작권 정보를 만들어보세요 -->
-                <!-- 예: <p class="text-gray-400">&copy; 2024 BrandName. All rights reserved.</p> -->
-            </div>
+
+            <!-- 21. 하단 바를 작업하세요 -->
+            <!-- 
+            힌트:
+            - 저작권 정보
+            - 제작 정보
+            - border-top 포함
+            -->
         </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // 22. 모바일 메뉴 토글 기능을 작업하세요
+        // 힌트: mobileMenuBtn과 mobileMenu 요소를 가져와서 클릭 이벤트 추가
+
+        // 23. 네비바 스크롤 효과를 작업하세요  
+        // 힌트: 스크롤 시 배경색과 그림자 효과 추가
+
+        // 24. 부드러운 스크롤링을 작업하세요
+        // 힌트: 앵커 링크 클릭 시 부드럽게 스크롤되도록 구현
+    </script>
 
 </body>
 </html>
